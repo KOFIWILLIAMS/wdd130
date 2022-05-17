@@ -1,9 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@900&family=PT+Sans+Narrow&display=swap');
+
+:root {
+
+    /* change the values below to your chosen font(s) */
+    --heading-font: "M PLUS 1p";
+    --paragraph-font: "PT Sans Narrow";
+
+}
+
+
 #background {
     height: 725px;
 }
 
 body {
     background-color: #cbcbcb;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
 }
 
 header {
@@ -11,14 +25,15 @@ header {
 }
 
 nav a:hover {
-    background-color: black;
-    color: #d9c2a3;
+    background-color: rgb(255, 255, 255);
+    color: #3d2100;
 }
 
 nav a {
     text-align: center;
     color: #ffffff;
     text-decoration: none;
+    padding: 35px;
 }
 
 #hero-msg h1,
@@ -42,6 +57,7 @@ main section {
 
 .icon {
     width: 80px;
+    padding-top: 10px;
 }
 
 #hero-img {
@@ -50,7 +66,16 @@ main section {
 
 .logo {
     width: 80px;
+    padding-top: 5px;
+    border-radius: 40px;
+
 }
+
+
+/* #logo_link {
+    padding-top: 5px;
+    border-radius: 5px;
+} */
 
 #content {
     max-width: 1600px;
@@ -60,10 +85,17 @@ main section {
 
 .home-title {
     color: #3d2100b3;
+    font-family: var(--heading-font);
+    font-size: 3em;
+    margin-top: 10px;
 }
 
 h4 {
     color: #000000;
+}
+
+h2 {
+    margin: 0;
 }
 
 .book,
@@ -71,6 +103,10 @@ h4 {
     background-color: #4ad400b3;
     color: #000000;
     text-decoration: none;
+    font-size: 3em;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
 }
 
 .book:hover,
@@ -81,32 +117,58 @@ h4 {
 
 .msg {
     background-color: #3d2100b3;
+    line-height: 1.5em;
+    padding: 35px;
 }
 
 .msg h2 {
     color: #ffffff;
+    font-family: var(--paragraph-font);
+
+}
+
+.card-img {
+    border: 10px solid #d9c2a3;
+}
+
+main section img {
+    box-sizing: border-box;
 }
 
 .msg p {
     color: #cbcbcb;
+    font-size: 1em;
+    padding-bottom: 15px;
+}
+
+.rivers-card,
+.camping-card,
+.rapids-card {
+    margin: 200px 0;
 }
 
 footer {
     background-color: #3d2100b3;
     color: white;
+    padding: 25px 50px;
+    margin-top: 200px;
 }
 
 footer h3 {
     color: #cbcbcb;
 }
 
-footer a{
-    
+footer a {
+
     text-decoration: none;
 }
 
- a:hover {
+a:hover {
     color: #cbcbcb;
-text-decoration: underline;
+    text-decoration: underline;
 
+}
+
+footer .social img {
+    padding-top: 15px;
 }
