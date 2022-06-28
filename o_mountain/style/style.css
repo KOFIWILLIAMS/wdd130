@@ -56,36 +56,36 @@ main section {
 
 .home-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+  grid-template-columns: 3fr 3fr 3fr 3fr 3fr 3fr 3fr 3fr 3fr 3fr  3fr;
 }
 
 .rivers-card {
-  grid-column: 2/4;
+  grid-column: 1/3;
   grid-row: 2/4;
 }
 
-/* .paragrading-card {
-  grid-column: 11/13;
-  grid-row: 2/3;
-} */
+.paragrading-card {
+  grid-column: 4/6;
+  grid-row: 2/4;
+}
 
 /* from column lines 2 to 4 and row lines 2 to 3 */
 .camping-card {
-  grid-column: 5/7;
+  grid-column: 7/9;
   grid-row: 2/4;
 }
 
 /* from column lines 5 to 7 and row lines 2 to 3 */
 
 .rapids-card {
-  grid-column: 8/10;
+  grid-column: 10/12;
   grid-row: 2/4;
 }
 
 /* from column lines 8 to 10 and row lines 2 to 3 */
 
 #background {
-  grid-column: 1/11;
+  grid-column: 1/12;
   grid-row: 4/9;
 }
 
@@ -184,7 +184,7 @@ h2 {
   color: #000000;
   text-decoration: none;
   font-size: 3em;
-  padding: 15px 30px;
+  padding: 10px 25px;
   margin-top: 50px;
   border-radius: 5px;
 }
@@ -199,11 +199,12 @@ h2 {
   /* background-color: #3d2100b3; */
   background-color: #ffffffac;
   line-height: 1.5em;
-  padding: 35px;
+  padding: 30px;
 
-  grid-column: 6/10;
+  grid-column: 6/11;
   grid-row: 6/7;
     padding: 35px;
+
     box-shadow: 5px 5px 10px #6f7364;
 }
 
@@ -237,7 +238,8 @@ main section img {
 
 .rivers-card,
 .camping-card,
-.rapids-card {
+.rapids-card,
+.paragrading-card {
   margin: 200px 0;
 }
 
@@ -257,7 +259,7 @@ footer h3 {
 }
 
 footer a {
-  color: rgb(45, 103, 248);
+  color: #dccd00ce;
 }
 
 a:hover {
