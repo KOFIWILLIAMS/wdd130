@@ -116,7 +116,7 @@ h2 {
   margin: 0;
 }
 
-.book,
+
 .join {
   background-color: #dccd00ce;
   color: #000000;
@@ -125,9 +125,12 @@ h2 {
   padding: 10px 25px;
   margin-top: 50px;
   border-radius: 5px;
+max-width: max-content;
+align-self: center;
+
 }
 
-.book:hover,
+
 .join:hover {
   background-color: #000000b3;
   color: #ffffff;
@@ -149,36 +152,6 @@ h2 {
 .msg h2 {
   color: #000000;
   font-family: var(--paragraph-font);
-}
-
-.card-img {
-  border: 10px solid #dccd00ce;
-
-    transition: transform .5s;
-    box-shadow: 5px 5px 10px #6f7364;
-}
-.card-img:hover {
-    opacity: .6;
-    transform: scale(1.1);
-}
-
-
-
-main section img {
-  box-sizing: border-box;
-}
-
-.msg p {
-  color: #181818;
-  font-size: 1em;
-  padding-bottom: 15px;
-}
-
-.rivers-card,
-.camping-card,
-.rapids-card,
-.paragrading-card {
-  margin: 200px 0;
 }
 
 footer {
@@ -217,77 +190,7 @@ footer .social img {
 
 
 
-
-
-
-
-
-
-
-
-
-/* for responsivenes: please don't edit */
-@media screen and (max-width: 900px) {
-    #hero, .home-grid {
-        display: block;
-        height: auto;
-    }
-    nav, footer {
-        flex-direction: column;
-    }
-    nav a {
-        display: block;
-        padding: 15px;
-    }
-    #hero {
-        margin-top: 0;
-    }
-    #hero-msg {
-        margin-top: 0;
-    }
-    #hero-msg h4 {
-        display: none;
-    }
-    .home-title {
-        font-size: 25px;
-        color: #6f7364;
-    }
-    .rivers-card, .camping-card, .rapids-card { 
-        margin: 50px auto;
-        width: 60%;
-    }
-    #background {
-        display: none;
-    }
-    .mountains, .msg {
-        width: 80%;
-        display: block;
-        margin: 0 auto;
-    }
-    footer {
-        margin-top: 25px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-body {
-     font-family: Arial;
-     margin: 0;
-   }
-   
-   * {
-     box-sizing: border-box;
-   }
-   
-   img {
+img {
      vertical-align: middle;
      
      
@@ -296,17 +199,19 @@ body {
    /* Position the image container (needed to position the left and right arrows) */
    .container {
      position: relative;
-     height: 10%;
+     
    }
    
    /* Hide the images by default */
    .mySlides {
      display: none;
+     height: 100%;
    }
    
    /* Add a pointer when hovering over the thumbnail images */
    .cursor {
      cursor: pointer;
+     height: 90px;
    }
    
    /* Next & previous buttons */
@@ -376,3 +281,58 @@ body {
    .demo:hover {
      opacity: 1;
    }
+
+
+
+
+   
+
+
+
+
+/* for responsivenes: please don't edit */
+@media screen and (max-width: 900px) {
+     #hero, .home-grid {
+         display: block;
+         height: auto;
+     }
+     nav, footer {
+         flex-direction: column;
+     }
+     nav a {
+         display: block;
+         padding: 15px;
+     }
+     #hero {
+         margin-top: 0;
+     }
+     #hero-msg {
+         margin-top: 0;
+     }
+     #hero-msg h4 {
+         display: none;
+     }
+     .home-title {
+         font-size: 25px;
+         color: #6f7364;
+     }
+     .rivers-card, .camping-card, .rapids-card { 
+         margin: 50px auto;
+         width: 60%;
+     }
+     #background {
+         display: none;
+     }
+     .mountains, .msg {
+         width: 80%;
+         display: block;
+         margin: 0 auto;
+     }
+     footer {
+         margin-top: 25px;
+     }
+ }
+ 
+ 
+ 
+ 
