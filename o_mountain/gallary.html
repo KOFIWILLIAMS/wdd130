@@ -5,7 +5,7 @@
      <meta charset="UTF-8" />
      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <link rel="stylesheet" href="style/style.css" />
+     <link rel="stylesheet" href="style/g_styles.css" />
      <title>Okwahu Mountain</title>
 </head>
 
@@ -21,52 +21,152 @@
                     <a href="contact.html">Contact Us</a>
                </nav>
           </header>
-          
-          <main class="home-grid">
-               <section class="rivers-card">
-                    <img class="card-img" src="images/g1.jpg" alt="river in forest" />
-                   
-               </section>
-               <section class="rivers-card">
-                    <img class="card-img" src="images/g2.jpg" alt="river in forest" />
-                    
-               </section>
-               <section class="rivers-card">
-                    <img class="card-img" src="images/g3.jpg" alt="river in forest" />
-                    
-               </section>
-               <section class="camping-card">
-                    <img class="card-img" src="images/g4.jpg" alt="tent in mountains" />
-               </section>
-               <section class="rapids-card">
-                    <img class="card-img" src="images/g5.jpg" alt="rafting boat" />
-               </section> 
-               <section class="rapids-card">
-                    <img class="card-img" src="images/g6.jpg" alt="rafting boat" />
-                    
-               </section>
-               
-               <a class="join" href="contact.html">Contact Us Now</a>
-          </main>
 
-          <footer>
-               <h3>Kwahu Mountain &copy; 2022 </h3>
-               <h3><a href="index.html">Home</a></h3>
-               <h3><a href="gallary.html">Gallary</a></h3>
-               <h3><a href="contact.html">Contact Us</a></h3>
-               <div class="social">
-                    <a href="https://facebook.com" target="_blank">
-                         <img src="images/facebook.png" alt="fb icon" />
-                    </a>
-                    <a href="https://twitter.com" target="_blank">
-                         <img src="images/twitter.png" alt="twitter icon" />
-                    </a>
-                    <a href="https://instagram.com" target="_blank">
-                         <img src="images/instagram.png" alt="instagram icon" />
-                    </a>
+          <main class="home">
+
+
+               <h2 style="text-align:center">Slideshow Gallery</h2>
+
+               <div class="container">
+                    <div class="mySlides">
+                         <div class="numbertext">1 / 6</div>
+                         <img src="images/1.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                         <div class="numbertext">2 / 6</div>
+                         <img src="images/2.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                         <div class="numbertext">3 / 6</div>
+                         <img src="images/3.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                         <div class="numbertext">4 / 6</div>
+                         <img src="images/4.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                         <div class="numbertext">5 / 6</div>
+                         <img src="images/5.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                         <div class="numbertext">6 / 6</div>
+                         <img src="images/6.jpg" style="width:100%">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+
+                    <div class="caption-container">
+                         <p id="caption"></p>
+                    </div>
+
+                    <div class="row">
+                         <div class="column">
+                              <img class="demo cursor" src="images/1.jpg" style="width:100%" onclick="currentSlide(1)"
+                                   alt="Paragrading ">
+                         </div>
+                         <div class="column">
+                              <img class="demo cursor" src="images/2.jpg" style="width:100%" onclick="currentSlide(2)"
+                                   alt="Paragrading ">
+                         </div>
+                         <div class="column">
+                              <img class="demo cursor" src="images/3.jpg" style="width:100%" onclick="currentSlide(3)"
+                                   alt="Paragrading ">
+                         </div>
+                         <div class="column">
+                              <img class="demo cursor" src="images/4.jpg" style="width:100%" onclick="currentSlide(4)"
+                                   alt="Road">
+                         </div>
+                         <div class="column">
+                              <img class="demo cursor" src="images/5.jpg" style="width:100%" onclick="currentSlide(5)"
+                                   alt="  Paragrading">
+                         </div>
+                         <div class="column">
+                              <img class="demo cursor" src="images/6.jpg" style="width:100%" onclick="currentSlide(6)"
+                                   alt="Kwahu Mountain ">
+                         </div>
+                    </div>
                </div>
-          </footer>
+
+               <script>
+                    let slideIndex = 1;
+                    showSlides(slideIndex);
+
+                    function plusSlides(n) {
+                         showSlides(slideIndex += n);
+                    }
+
+                    function currentSlide(n) {
+                         showSlides(slideIndex = n);
+                    }
+
+                    function showSlides(n) {
+                         let i;
+                         let slides = document.getElementsByClassName("mySlides");
+                         let dots = document.getElementsByClassName("demo");
+                         let captionText = document.getElementById("caption");
+                         if (n > slides.length) { slideIndex = 1 }
+                         if (n < 1) { slideIndex = slides.length }
+                         for (i = 0; i < slides.length; i++) {
+                              slides[i].style.display = "none";
+                         }
+                         for (i = 0; i < dots.length; i++) {
+                              dots[i].className = dots[i].className.replace(" active", "");
+                         }
+                         slides[slideIndex - 1].style.display = "block";
+                         dots[slideIndex - 1].className += " active";
+                         captionText.innerHTML = dots[slideIndex - 1].alt;
+                    }
+               </script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</main>
+
+<a class="Contact_US" href="contact.html">Contact Us Now</a>
+
+
+
+<footer>
+     <h3>Kwahu Mountain &copy; 2022 </h3>
+     <h3><a href="index.html">Home</a></h3>
+     <h3><a href="gallary.html">Gallary</a></h3>
+     <h3><a href="contact.html">Contact Us</a></h3>
+     <div class="social">
+          <a href="https://facebook.com" target="_blank">
+               <img src="images/facebook.png" alt="fb icon" />
+          </a>
+          <a href="https://twitter.com" target="_blank">
+               <img src="images/twitter.png" alt="twitter icon" />
+          </a>
+          <a href="https://instagram.com" target="_blank">
+               <img src="images/instagram.png" alt="instagram icon" />
+          </a>
      </div>
+</footer>
+</div>
 </body>
 
 </html>
